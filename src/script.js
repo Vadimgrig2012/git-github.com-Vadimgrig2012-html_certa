@@ -38,12 +38,12 @@ setTimeout(function () {
         delay: function (el, i) { return i * 150 },
         direction: 'alternate',
         loop: false,
-        complete: function (anim) {
-            anime({
-                targets: elem_path,
-                fill: '#006828',
-            });
-        }
+        // complete: function (anim) {
+        //     anime({
+        //         targets: elem_path,
+        //         fill: '#006828',
+        //     });
+        // }
     });
 }, 4000);
 
