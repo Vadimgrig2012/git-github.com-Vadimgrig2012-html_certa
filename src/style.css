@@ -1,0 +1,71 @@
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box-anim {
+  /* display: block; */
+  background-color: #006828;
+  height: 30vh;
+}
+
+.container-text {
+  padding-top: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.title-text {
+  /* display: block; */
+  color: white;
+  font-family: 'PT Sans Narrow';
+  font-size: 90px;
+  text-align: center
+}
+
+.title-text2 {
+  color: white;
+  font-family: 'PT Sans Narrow';
+  font-size: 50px;
+  text-align: center
+}
+
+.logo {
+  display: block;
+  margin-top: 40px;
+  margin-right: 55px;
+  opacity: 0;
+}
+
+.line1 {
+  position: absolute;
+  left: 50%;
+  width: 300px;
+  background-color: #006828;
+  height: 0;
+  bottom: 0;
+}
+
+.line2 {
+  position: absolute;
+  right: 50%;
+  width: 300px;
+  background-color: #006828;
+  height: 0;
+  top: 0;
+}
+
+.box-subtitle {
+  margin-top: 20px;
+  width: 50vw;
+  height: 0;
+  background-color: #006828;
+}
