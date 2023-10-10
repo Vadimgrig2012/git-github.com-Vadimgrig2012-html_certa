@@ -7,6 +7,12 @@ anime({
 });
 
 
+
+
+
+
+
+
 anime({
     targets: '.title-text',
     translateX: ['-200%', 0],
@@ -17,19 +23,39 @@ anime({
 
 
 anime({
+    targets: '.border',
+    width: '50%',
+    easing: 'easeInOutQuad',
+    duration: 1000,
+    delay: 4000
+  });
+
+anime({
     targets: '.title-text2',
-    translateX: ['80%', 0],
+    translateX: ['100%', 0],
     easing: 'easeOutQuart',
     duration: 1000,
     delay: 3500,
 });
 
+anime({
+    targets: '.border2',
+    width: '30%',
+    easing: 'easeInOutQuad',
+    duration: 1000,
+    delay: 4000
+  });
+
+
+
+
+
 
 // logo
-const elem_path = document.querySelectorAll('path:not(:first-child)');
+const elem_path = document.querySelectorAll('path');
 
 setTimeout(function () {
-    document.querySelector('.logo').style.opacity = 1; 
+    document.querySelector('.logo').style.opacity = 1;
     anime({
         targets: ['path', 'rect'],
         strokeDashoffset: [anime.setDashoffset, 0],
@@ -38,15 +64,16 @@ setTimeout(function () {
         delay: function (el, i) { return i * 150 },
         direction: 'alternate',
         loop: false,
-        // complete: function (anim) {
-        //     anime({
-        //         targets: elem_path,
-        //         fill: '#006828',
-        //     });
-        // }
     });
 }, 4000);
 
+
+
+
+
+
+
+let bigtext = document.querySelector('.bigtext');
 
 anime({
     targets: '.line1',
@@ -57,6 +84,12 @@ anime({
             targets: '.line1',
             bottom: '100%',
             easing: 'easeInOutQuad',
+        });
+        anime({
+            targets: bigtext,
+            complete: function () {
+                bigtext.remove();
+            }
         });
     }
 });
@@ -76,10 +109,16 @@ anime({
     }
 });
 
+
+
+
+
+
+
 anime({
     targets: '.box-subtitle',
-    height: '500',
+    height: '50vh',
     duration: 500,
     easing: 'linear',
     delay: 6800,
-  });
+});
