@@ -122,7 +122,7 @@ anime({
     height: '50vh',
     duration: 500,
     easing: 'linear',
-    delay: 10000,
+    delay: 9000,
 });
 
 anime({
@@ -130,7 +130,7 @@ anime({
     width: '48vw',
     duration: 500,
     easing: 'linear',
-    delay: 11000,
+    delay: 10000,
     complete: (anim) => {
         anime({
             targets: '.box-subtitle-2',
