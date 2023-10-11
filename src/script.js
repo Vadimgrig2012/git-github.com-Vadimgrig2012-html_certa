@@ -3,7 +3,7 @@ anime({
     width: [0, '50vw'],
     easing: 'easeOutQuart',
     duration: 2000,
-    delay: 2000,
+    delay: 3000,
 });
 
 
@@ -18,7 +18,7 @@ anime({
     translateX: ['-200%', 0],
     easing: 'easeOutQuart',
     duration: 1000,
-    delay: 3000,
+    delay: 4000,
 });
 
 
@@ -27,7 +27,7 @@ anime({
     width: '50%',
     easing: 'easeInOutQuad',
     duration: 1000,
-    delay: 4000
+    delay: 5000
   });
 
 anime({
@@ -35,7 +35,7 @@ anime({
     translateX: ['100%', 0],
     easing: 'easeOutQuart',
     duration: 1000,
-    delay: 3500,
+    delay: 5000,
 });
 
 anime({
@@ -43,7 +43,7 @@ anime({
     width: '30%',
     easing: 'easeInOutQuad',
     duration: 1000,
-    delay: 4000
+    delay: 6000
   });
 
 
@@ -65,7 +65,7 @@ setTimeout(function () {
         direction: 'alternate',
         loop: false,
     });
-}, 5000);
+}, 6500);
 
 
 
@@ -79,6 +79,7 @@ anime({
     targets: '.line1',
     height: '100%',
     easing: 'easeInOutQuad',
+    delay: 1000,
     complete: (anim) => {
         anime({
             targets: '.line1',
@@ -99,6 +100,7 @@ anime({
     targets: '.line2',
     height: '100%',
     easing: 'easeInOutQuad',
+    delay: 1000,
     complete: (anim) => {
         anime({
             targets: '.line2',
@@ -120,7 +122,7 @@ anime({
     height: '50vh',
     duration: 500,
     easing: 'linear',
-    delay: 7800,
+    delay: 10000,
 });
 
 anime({
@@ -128,7 +130,7 @@ anime({
     width: '48vw',
     duration: 500,
     easing: 'linear',
-    delay: 8500,
+    delay: 11000,
     complete: (anim) => {
         anime({
             targets: '.box-subtitle-2',
