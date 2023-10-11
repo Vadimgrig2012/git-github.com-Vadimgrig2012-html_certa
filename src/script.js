@@ -65,7 +65,7 @@ setTimeout(function () {
         direction: 'alternate',
         loop: false,
     });
-}, 4000);
+}, 5000);
 
 
 
@@ -120,5 +120,21 @@ anime({
     height: '50vh',
     duration: 500,
     easing: 'linear',
-    delay: 6800,
+    delay: 7800,
 });
+
+anime({
+    targets: '.box-subtitle-2',
+    width: '48vw',
+    duration: 500,
+    easing: 'linear',
+    delay: 8500,
+    complete: (anim) => {
+        anime({
+            targets: '.box-subtitle-2',
+            easing: 'easeInOutQuad',
+            height: '50vh',
+        });
+    }
+});
+
