@@ -28,7 +28,7 @@ anime({
     easing: 'easeInOutQuad',
     duration: 1000,
     delay: 5000
-  });
+});
 
 anime({
     targets: '.title-text2',
@@ -44,7 +44,7 @@ anime({
     easing: 'easeInOutQuad',
     duration: 1000,
     delay: 6000
-  });
+});
 
 
 
@@ -139,4 +139,54 @@ anime({
         });
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+// let paths = [
+
+// ];
+
+
+// let timeline = anime.timeline({ autoplay: true, direction: 'alternate', loop: true });
+
+// paths.forEach(function (path, index) {
+//     timeline
+//         .add({
+//             targets: path.id,
+//             d: {
+//                 value: path.d,
+//                 duration: 1000,
+//                 easing: 'easeInOutQuad'
+//             },
+//             offset: 1000 + 10 * index
+//         });
+// });
+
+// timeline
+//     .add({
+//         targets: 'path:first-child',
+//         opacity: {
+//             value: 1,
+//             duration: 1000,
+//             easing: 'easeInOutQuad'
+//         },
+//         offset: 2000 + 10 * paths.length
+//     });
+
+
+
+
+
+
+
+
 
