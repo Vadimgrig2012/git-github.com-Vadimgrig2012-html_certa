@@ -52,12 +52,12 @@ anime({
 
 
 // logo
-const elem_path = document.querySelectorAll('path');
+const elem_path = document.querySelectorAll('.logo path');
 
 setTimeout(function () {
     document.querySelector('.logo').style.opacity = 1;
     anime({
-        targets: ['path', 'rect'],
+        targets: ['.logo path', '.logo rect'],
         strokeDashoffset: [anime.setDashoffset, 0],
         easing: 'easeInOutSine',
         duration: 1500,
