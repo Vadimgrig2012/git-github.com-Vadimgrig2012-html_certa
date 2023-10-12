@@ -11,6 +11,42 @@ anime({
 
 
 
+let animations = [
+    {
+      targets: '.title-text',
+      translateX: ['-200%', 0],
+      easing: 'easeOutQuart',
+      duration: 1000,
+    },
+    {
+      targets: '.title-text',
+      translateY: ['-100%', 0],
+      easing: 'easeOutQuart',
+      duration: 1000,
+
+    },
+    {
+      targets: '.title-text',
+      rotate: '1turn',
+      easing: 'easeOutQuart',
+      duration: 1000,
+    },
+    {
+        targets: '.title-text',
+        scale: [0, 1],
+        easing: 'easeOutQuart',
+        duration: 1000,
+    },
+    {
+        targets: '.title-text',
+        opacity: [0, 1],
+        easing: 'easeOutQuart',
+        duration: 2000,
+  
+      },
+  ];
+
+
 
 let text = ['Вообще все', 'Совсем все', 'Очень все', 'Прям все-все', 'Мы можем все']
 anime({
@@ -22,11 +58,16 @@ anime({
     complete: (anim) => {
         let i = 0;
         setInterval(() => {
-          document.querySelector('.title-text').textContent = text[i];
-          i = (i + 1) % text.length;
-        }, 5000);
+            anime(animations[i]);
+            i = (i + 1) % animations.length;
+            document.querySelector('.title-text').textContent = text[i];
+            i = (i + 1) % text.length;
+          }, 5000);
     }
 });
+
+
+
 
 
 
