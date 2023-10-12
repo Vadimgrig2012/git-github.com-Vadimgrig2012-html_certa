@@ -12,14 +12,22 @@ anime({
 
 
 
-
+let text = ['Вообще все', 'Совсем все', 'Очень все', 'Прям все-все', 'Мы можем все']
 anime({
     targets: '.title-text',
     translateX: ['-200%', 0],
     easing: 'easeOutQuart',
     duration: 1000,
     delay: 4000,
+    complete: (anim) => {
+        let i = 0;
+        setInterval(() => {
+          document.querySelector('.title-text').textContent = text[i];
+          i = (i + 1) % text.length;
+        }, 5000);
+    }
 });
+
 
 
 anime({
@@ -27,7 +35,16 @@ anime({
     width: '50%',
     easing: 'easeInOutQuad',
     duration: 1000,
-    delay: 5000
+    delay: 5000,
+    complete: (anim) => {
+        anime({
+            targets: '.border',
+            width: '0%',
+            easing: 'easeInOutQuad',
+            duration: 1000,
+            delay: 2500,
+        })
+    }
 });
 
 anime({
@@ -297,7 +314,7 @@ setTimeout(function (){
             targets: path.id,
             d: {
                 value: path.d,
-                duration: 10,
+                duration: 20,
                 easing: 'easeInOutQuad',
             },             
         };
@@ -312,7 +329,7 @@ setTimeout(function (){
             targets: 'path:first-child',
             opacity: {
                 value: 1,
-                duration: 10,
+                duration: 20,
                 easing: 'easeInOutQuad',
             },
         })
