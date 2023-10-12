@@ -298,15 +298,18 @@ setTimeout(function (){
     let timeline = anime.timeline({ autoplay: true, direction: 'alternate', loop: true});
 
     paths.forEach(function (path, index) {
-        timeline
-            .add({
-                targets: path.id,
-                d: {
-                    value: path.d,
-                    duration: 60,
-                },
+        let animation = {
+            targets: path.id,
+            d: {
+                value: path.d,
+                duration: 60,
+            },
+        };
+        if (index === 0 || index === paths.length - 1) {
+            animation.endDelay = 1000;
+        }
+        timeline.add(animation);
 
-            });
     });
 
     timeline
@@ -316,19 +319,15 @@ setTimeout(function (){
                 value: 1,
                 duration: 60,
             },
-        });
-},12000);
-
-// anime({
-//     tergets: '.svg-box1',
-//     opacity: 1,
-//     delay: 12500,
-// })
+        })
+},13000);
 
 
-
-
-
-
-
-
+const logo = document.querySelector('.svg-box1');
+anime({
+  targets: logo,
+  width: 600,
+  height: 400,
+  easing: 'easeInOutQuad',
+  delay: 12000,
+});
