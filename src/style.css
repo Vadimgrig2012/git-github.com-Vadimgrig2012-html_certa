@@ -106,19 +106,16 @@ body {
 
 
 .box-subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50vw;
   margin-top: 20px;
   background-color: #006828;
 }
 
 
-.svg_anim{
-  width: 0;
-  height: 0;
-  /* scale: 0; */
-  /* padding: 0; */
-  /* margin: 0; */
-}  
+
 
 .box-subtitle-2 {
   margin-top: 20px;
@@ -127,16 +124,26 @@ body {
   height: 3px;
 }
 
+/* .svg_anim{
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+}  */
 
-/* svg {
-  display: block;
-  margin: 0 auto;
+.svg-box1 {
+  /* display: block; */
+  padding: 0;
+  margin: 0;
+  /* width: 0; */
+  /* height: 0; */
+  /* opacity: 0; */
 }
 
-path {
+.svg-box1 path{
   fill: none;
-  stroke: black;
+  stroke: white;
   stroke-width: 1;
   stroke-linecap: round;
   stroke-linejoin: round;
-} */
+}
