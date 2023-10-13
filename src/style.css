@@ -13,7 +13,6 @@ body {
 
 
 .box-anim {
-  /* display: block; */
   background-color: #006828;
   height: 300px;
   margin-top: 20px;
@@ -28,12 +27,13 @@ body {
   width: 100%;
 }
 .title-text {
-  position: relative;
   color: white;
   font-family: 'PT Sans Narrow';
   font-size: 90px;
   text-align: center;
 }
+
+
 .title-text .border {
   position: absolute;
   top: 0;

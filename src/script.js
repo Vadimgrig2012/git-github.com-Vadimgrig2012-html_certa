@@ -9,7 +9,6 @@ anime({
 
 
 
-
 let text = ['Вообще все', 'Совсем все', 'Очень все', 'Прям все-все', 'Мы можем все']
 anime({
     targets: '.title-text',
@@ -17,12 +16,12 @@ anime({
     easing: 'easeOutQuart',
     duration: 1000,
     delay: 4000,
-    complete: (anim) => {
+    complete: (anim) =>{
         let i = 0;
         setInterval(() => {
             document.querySelector('.title-text').textContent = text[i];
             i = (i + 1) % text.length;
-          }, 5000);
+        }, 5500);
     }
 });
 
@@ -141,6 +140,7 @@ anime({
     easing: 'linear',
     delay: 9000,
 });
+
 
 anime({
     targets: '.box-subtitle-2',
