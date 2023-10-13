@@ -9,73 +9,55 @@ anime({
 
 
 
-anime({
-    targets: '.title-text',
-    translateY: ['-200%', 0],
-    easing: 'easeOutQuart',
-    duration: 1000,
-    delay: 4000,
-});
+
+const textArray = ['Мы можем все', 'Совсем все', 'Очень все', 'Прям все-все'];
+const container = document.querySelector('.title-text');
+let currentIndex = 0;
+
+setTimeout(function () {
+    function animateText() {
+        container.innerHTML = textArray[currentIndex];
+        
+        anime({
+          targets: container,
+          opacity: [0, 1],
+          translateY: [-100, 0],
+          duration: 1000,
+          easing: 'easeOutQuart',
+          delay: 2000,
+          complete: function() {
+            anime({
+              targets: container,
+              opacity: [1, 0],
+              translateY: [0, -100],
+              duration: 1000,
+              easing: 'easeOutQuart',
+              delay: 2000,
+              complete: function() {
+                currentIndex++;
+                if (currentIndex >= textArray.length) {
+                  currentIndex = 0;
+                }
+                animateText();
+              }
+            });
+          }
+        });
+      }
+      
+      animateText();
+},3500)
 
 
 
-// let textArray = ['Мы можем все', 'Совсем все', 'Очень все', 'Прям все-все', 'Совсем все']
-// const titleText = document.querySelector('.title-text');
-
-// setTimeout(function () {
-//     textArray.forEach((el)=>{
-//         anime({
-//             targets: el,
-//             translateX: ['100%', 0],
-//             opacity: [0, 1],
-//             duration: 1000,
-            
-//         })
-//     })
-// }, 4000);
-
-// animeDelay = 4000; // Задержка между анимациями
-
-// function animeEach(textArray, titleText, animeDelay) {
-//   textArray.forEach((element, index) => {
-//       anime({
-//           targets: titleText[index],
-//           translateX: ['100%', 0], // Анимация перемещения текста
-//           opacity: [0, 1], // Анимация появления текста
-//           duration: 1000
-//       });
-//       if (index === textArray.length - 1) return; // Если это последний элемент массива, то завершаем выполнение функции
-//       setTimeout(() => animeEach(textArray, titleText, animeDelay), animeDelay); // Запускаем функцию повторно через заданный интервал времени
-//   });  
-// }
-// animeEach(textArray, titleText);
-
-
-
-
-anime({
-    targets: '.border',
-    width: '50%',
-    easing: 'easeInOutQuad',
-    duration: 1000,
-    delay: 5000,
-    // complete: (anim) => {
-    //     anime({
-    //         targets: '.border',
-    //         width: '0%',
-    //         easing: 'easeInOutQuad',
-    //         duration: 1000,
-    //         delay: 2500,
-    //     })
-    // }
-});
 
 anime({
     targets: '.title-text2',
-    translateX: ['100%', 0],
+    translateY: [100, 0],
+    opacity: [0, 1],
     easing: 'easeOutQuart',
     duration: 1000,
-    delay: 5000,
+    delay: 5500,
 });
 
 anime({
@@ -369,3 +351,45 @@ anime({
     opacity: [0, 1],
     delay: 9500,
 });
+
+
+
+
+
+const textArray2= ['Тут может быть все что угодно', '...и даже самолет', '...а вы не верили'];
+const container2 = document.querySelector('.box-anim-text');
+let currentIndex2 = 0;
+
+setTimeout(function () {
+    function animateText() {
+        container2.innerHTML = textArray2[currentIndex2];
+        
+        anime({
+          targets: container2,
+          rotateX: ['90deg',0],
+          opacity: [0, 1],
+          duration: 50,
+          easing: 'linear',
+          delay: 200,
+          complete: function() {
+            anime({
+              targets: container2,
+              rotateX: [0, '90deg'],
+              opacity: [1, 0],
+              duration: 50,
+              easing: 'linear',
+              delay: 5000,
+              complete: function() {
+                currentIndex2++;
+                if (currentIndex2 >= textArray2.length) {
+                  currentIndex2 = 0;
+                }
+                animateText();
+              }
+            });
+          }
+        });
+      }
+      
+      animateText();
+},15000)
