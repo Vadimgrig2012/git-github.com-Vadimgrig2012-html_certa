@@ -82,12 +82,12 @@ setTimeout(function () {
         targets: ['g path', 'g rect'],
         strokeDashoffset: [anime.setDashoffset, 0],
         easing: 'easeInOutSine',
-        duration: 1500,
+        duration: 1000,
         delay: function (el, i) { return i * 150 },
         direction: 'alternate',
         loop: false,
     });
-}, 6500);
+}, 3000);
 
 
 
