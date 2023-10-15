@@ -10,7 +10,7 @@ anime({
 
 
 
-const textArray = ['Мы можем все', 'Совсем все', 'Очень все', 'Прям все-все'];
+const textArray = ['Мы можем все', 'Совсем все', 'Вообще все', 'Прям все-все'];
 const container = document.querySelector('.title-text');
 let currentIndex = 0;
 
@@ -22,17 +22,17 @@ setTimeout(function () {
           targets: container,
           opacity: [0, 1],
           translateY: [-100, 0],
-          duration: 1000,
+          duration: 500,
           easing: 'easeOutQuart',
-          delay: 2000,
+          delay: 500,
           complete: function() {
             anime({
               targets: container,
               opacity: [1, 0],
               translateY: [0, -100],
-              duration: 1000,
+              duration: 500,
               easing: 'easeOutQuart',
-              delay: 2000,
+              delay: 5000,
               complete: function() {
                 currentIndex++;
                 if (currentIndex >= textArray.length) {
@@ -46,7 +46,7 @@ setTimeout(function () {
       }
       
       animateText();
-},3500)
+},4000)
 
 
 
@@ -74,8 +74,6 @@ anime({
 
 
 // logo
-// const elem_path = document.querySelectorAll('path');
-
 setTimeout(function () {
     document.querySelector('.logo').style.opacity = 1;
     anime({
@@ -87,7 +85,7 @@ setTimeout(function () {
         direction: 'alternate',
         loop: false,
     });
-}, 3000);
+}, 5000);
 
 
 
@@ -144,28 +142,8 @@ anime({
     height: '100%',
     duration: 500,
     easing: 'linear',
-    delay: 9000,
+    delay: 8000,
 });
-
-
-anime({
-    targets: '.box-subtitle-2',
-    width: '50vw',
-    duration: 500,
-    easing: 'linear',
-    delay: 10000,
-    complete: (anim) => {
-        anime({
-            targets: '.box-subtitle-2',
-            easing: 'easeInOutQuad',
-            height: '100%',
-        });
-    }
-});
-
-
-
-
 
 
 
@@ -339,7 +317,7 @@ setTimeout(function () {
                 easing: 'easeInOutQuad',
             },
         })
-}, 10500);
+}, 12000);
 
 
 const logo = document.querySelector('.svg-box1');
@@ -349,15 +327,34 @@ anime({
     height: 400,
     easing: 'easeInOutQuad',
     opacity: [0, 1],
-    delay: 9500,
+    delay: 10000,
 });
 
 
 
 
 
-const textArray2= ['Тут может быть все что угодно', '...и даже самолет', '...а вы не верили'];
-const container2 = document.querySelector('.box-anim-text');
+
+anime({
+    targets: '.box-subtitle-2',
+    width: '50vw',
+    duration: 500,
+    easing: 'linear',
+    delay: 17000,
+    complete: (anim) => {
+        anime({
+            targets: '.box-subtitle-2',
+            easing: 'easeInOutQuad',
+            height: '100%',
+        });
+    }
+});
+
+
+
+
+const textArray2= ['Тут может быть все что угодно', '...и даже самолет'];
+const container2 = document.querySelector('.text_anim2');
 let currentIndex2 = 0;
 
 setTimeout(function () {
@@ -382,7 +379,7 @@ setTimeout(function () {
               complete: function() {
                 currentIndex2++;
                 if (currentIndex2 >= textArray2.length) {
-                  currentIndex2 = 0;
+                    container2.remove();
                 }
                 animateText();
               }
@@ -392,4 +389,42 @@ setTimeout(function () {
       }
       
       animateText();
-},15000)
+},20000)
+
+
+anime({
+    targets: '.svg_circle',
+    delay: 31000,
+    translateX: ['20vw', 0],
+    duration: 1000,
+    opacity: 1,
+    width: '608',
+    height: '405',
+    complete: function(anim) {
+        anime({
+            targets: ['#path_svg', '.svg_circle'],
+            d: 'M352.5 61.8821C344.509 77.5311 338.022 94.0864 336 98.3821C332.8 105.182 319.833 134.882 313.5 148.882L315 185.882L427 188.382L464.5 135.882C462 135.049 456.9 133.182 456.5 132.382C456.1 131.582 465.667 128.716 470.5 127.382H492.5C494.667 128.049 499 129.682 499 130.882C499 131.607 501.418 131.147 504.5 131.382C506.842 131.56 507 131.882 509 132.382L507.5 132.882L504.5 133.382L499 133.882L475.5 184.882L472.5 193.882L485.5 196.382V206.882L472.5 209.882L501.5 268.382L508 268.882L512.5 269.882L508 271.382L501.5 271.882C499.667 273.382 496 275.382 493.5 275.382C491.46 275.382 476.833 275.215 470 275.382C466.5 274.715 463.5 273.382 458.5 271.382C458 271.182 463.5 268.382 467 267.882L427.5 215.882L315 220.382L315.5 257.882L372 374.382C365.5 374.882 352.5 373.5 349 370C345.547 366.547 311.5 327.882 294.5 308.882H291L286.5 311.882C281.077 312.929 271.428 314.306 265.5 313.382C261.043 312.687 258.842 311.02 259 307.382C259.188 303.062 260.034 300.849 264 299.882C270.591 298.275 283 299.382 288.5 301.382L270 279.382C269.433 279.549 268.802 280.535 268 280.882C266.736 281.43 265.306 281.464 265 282.382C259.438 283.82 252.629 283.633 247.5 283.757C241.171 283.91 237.777 282.593 237.5 277.882C237 269.382 242.816 270.094 246 269.882C253.695 269.369 256 269.882 262 270.382L246 250.382C245.752 250.581 245 250.882 244.5 251.882C243.58 252.296 242.315 252.11 241.5 252.382C240.439 252.736 241.634 253.504 240.5 253.882C234.671 255.826 227.095 255.382 221.5 255.382C217.046 255.014 214 253.382 213.5 249.258C212.77 243.238 216.201 242.09 221.5 241.382C226.965 240.653 234.5 241.382 238.5 241.382L218 221.882C192.5 222.382 141.5 220.382 137 219.882C134.666 219.623 123.066 218.88 113 215.382C105.922 212.923 98 209.382 96 204.882C99.5 200.382 113.922 193.54 130.5 190.382C141 188.382 165 187.882 186.5 187.208C198.977 186.656 209.773 186.687 218 186.382L237 166.382C231.5 166.882 221.436 168.107 216 166.382C212.483 165.266 212 162.434 212 158.882C212 154.908 215.066 153.882 219.5 153.382C225.107 152.75 234.253 152.824 239 153.382L240.5 155.382H243L244 157.382L260.5 137.382C251.333 138.715 235.5 140.734 235.5 132.382C235.5 127.382 236 126.882 238 125.382C244 122.382 257.404 124.283 262 124.882L263.5 126.382L266 126.882L267.5 127.882L285 105.882C279.438 107.206 270.015 108.64 263.5 107.882C257.715 107.209 255.596 105.708 255.023 101.382C253.5 89.8821 279.5 94.3821 281.5 94.8821C282.426 95.1136 284.622 96.1249 286.5 96.8821C288.5 99.3821 290.5 98.3821 290.5 98.3821C306 79.0488 337.8 39.6821 341 36.8821C345 33.3821 357.5 28.7922 365 30.2922C366.662 30.6246 365.522 33.7266 363.5 38.3821M352.5 61.8821C356.931 53.2052 360.857 44.4668 363.5 38.3821M352.5 61.8821L363.5 38.3821',
+            baseFrequency: 1,
+            scale: 1,
+            // easing: 'easeInOutExpo',
+            // delay: 200,
+        })
+    }
+})
+
+anime({
+    targets: '.box-anim-text',
+    rotateX: ['90deg', 0],
+    delay: 34000,
+    duration: 50,
+    easing: 'linear',
+    complete: function(anim) {
+        anime({
+            targets: '.box-anim-text',
+            rotateX: [0, '90deg'],
+            duration: 50,
+            easing: 'linear',
+            delay: 5000,
+        })
+    }
+})
