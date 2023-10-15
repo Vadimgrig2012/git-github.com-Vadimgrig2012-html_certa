@@ -1,6 +1,6 @@
 anime({
     targets: '.box-anim',
-    width: [0, '50vw'],
+    width: [0, '100%'],
     easing: 'easeOutQuart',
     duration: 2000,
     delay: 3000,
@@ -141,7 +141,7 @@ anime({
 
 anime({
     targets: '.box-subtitle',
-    height: '50vh',
+    height: '100%',
     duration: 500,
     easing: 'linear',
     delay: 9000,
@@ -150,7 +150,7 @@ anime({
 
 anime({
     targets: '.box-subtitle-2',
-    width: '48vw',
+    width: '50vw',
     duration: 500,
     easing: 'linear',
     delay: 10000,
@@ -158,7 +158,7 @@ anime({
         anime({
             targets: '.box-subtitle-2',
             easing: 'easeInOutQuad',
-            height: '50vh',
+            height: '100%',
         });
     }
 });
