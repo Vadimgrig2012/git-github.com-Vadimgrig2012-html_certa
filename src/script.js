@@ -428,3 +428,59 @@ anime({
         })
     }
 })
+
+
+
+setTimeout(() => {
+let tl = anime.timeline({
+    easing: 'easeOutExpo',
+    duration: 2000,
+    // opacity: [1, 0]
+})
+
+tl
+.add({
+    targets: '.svg-box1',
+    translateX: [0, '-100vw'],
+    easing: 'easeInOutBack',
+    complete: function(){
+        document.querySelector('.svg-box1').remove();
+    }
+})
+.add({
+    targets: '.svg_circle',
+    translateX: [0, '-100vw'],
+    easing: 'easeInOutBack',
+    complete: function(){
+        document.querySelector('.svg_circle').remove();
+    }
+})
+.add({
+    targets: '.subtitle',
+    width: ['100%', 0],
+    complete: function(){
+        document.querySelector('.subtitle').remove();
+    }
+})
+.add({
+    targets: '.title',
+    translateY: [0, '-100vh'],
+    update: function(){
+        document.querySelector('.background').style.display = 'flex';  
+    },
+    complete: function(){
+        document.querySelector('.title').remove();
+        document.querySelector('.line1').remove();
+        document.querySelector('.line2').remove();
+        
+    }
+})
+.add({
+    targets: '.background',
+    width: '100vw',
+    height: '100vh',
+    background: '#006828',
+    opacity: 1
+})
+
+}, 40000);
