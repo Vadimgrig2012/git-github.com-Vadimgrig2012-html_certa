@@ -129,8 +129,8 @@ body {
 }
 
 .svg-box1 path{
-  fill: none;
-  stroke: white;
+  /* fill: none; */
+  /* stroke: white; */
   fill: white;
   stroke-width: 0;
   stroke-linecap: round;
@@ -187,3 +187,23 @@ body {
 .background {
   display: none;
 }
+
+/* .background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #006828;
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: -1;
+} */

@@ -465,9 +465,9 @@ tl
 .add({
     targets: '.title',
     translateY: [0, '-100vh'],
-    update: function(){
-        document.querySelector('.background').style.display = 'flex';  
-    },
+    // update: function(){
+    //     document.querySelector('.background').style.display = 'flex';  
+    // },
     complete: function(){
         document.querySelector('.title').remove();
         document.querySelector('.line1').remove();
@@ -477,10 +477,26 @@ tl
 })
 .add({
     targets: '.background',
-    width: '100vw',
-    height: '100vh',
+    width: [0, '100vw'],
+    height: [0, '100vh'],
     background: '#006828',
-    opacity: 1
-})
+    opacity: 1,
+    begin: function(){
+        document.querySelector('.background').style.display = 'flex';  
+    }
 
+// })
+// .add({
+//     targets: '.background',
+//     scale: [0, 1],
+//     duration: 1000,
+//     easing: 'easeInOutQuad',
+//     begin: function() {
+//       document.querySelector('.background').style.display = 'flex';
+//     },
+//     complete: function() {
+//       document.querySelector('.background::before').style.opacity = 1;
+//     }
+
+// })
 }, 40000);
