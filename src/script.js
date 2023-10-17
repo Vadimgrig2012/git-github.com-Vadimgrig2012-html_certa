@@ -432,71 +432,71 @@ anime({
 
 
 setTimeout(() => {
-let tl = anime.timeline({
-    easing: 'easeOutExpo',
-    duration: 2000,
-    // opacity: [1, 0]
-})
+    let tl = anime.timeline({
+        easing: 'easeOutExpo',
+        duration: 2000,
+        // opacity: [1, 0]
+    })
 
-tl
-.add({
-    targets: '.svg-box1',
-    translateX: [0, '-100vw'],
-    easing: 'easeInOutBack',
-    complete: function(){
-        document.querySelector('.svg-box1').remove();
-    }
-})
-.add({
-    targets: '.svg_circle',
-    translateX: [0, '-100vw'],
-    easing: 'easeInOutBack',
-    complete: function(){
-        document.querySelector('.svg_circle').remove();
-    }
-})
-.add({
-    targets: '.subtitle',
-    width: ['100%', 0],
-    complete: function(){
-        document.querySelector('.subtitle').remove();
-    }
-})
-.add({
-    targets: '.title',
-    translateY: [0, '-100vh'],
-    // update: function(){
-    //     document.querySelector('.background').style.display = 'flex';  
-    // },
-    complete: function(){
-        document.querySelector('.title').remove();
-        document.querySelector('.line1').remove();
-        document.querySelector('.line2').remove();
-        
-    }
-})
-.add({
-    targets: '.background',
-    width: [0, '100vw'],
-    height: [0, '100vh'],
-    background: '#006828',
-    opacity: 1,
-    begin: function(){
-        document.querySelector('.background').style.display = 'flex';  
-    }
+    tl
+    .add({
+        targets: '.svg-box1',
+        translateX: [0, '-100vw'],
+        easing: 'easeInOutBack',
+        complete: function(){
+            document.querySelector('.svg-box1').remove();
+        }
+    })
+    .add({
+        targets: '.svg_circle',
+        translateX: [0, '-100vw'],
+        easing: 'easeInOutBack',
+        complete: function(){
+            document.querySelector('.svg_circle').remove();
+        }
+    })
+    .add({
+        targets: '.subtitle',
+        width: ['100%', 0],
+        complete: function(){
+            document.querySelector('.subtitle').remove();
+        }
+    })
+    .add({
+        targets: '.title',
+        translateY: [0, '-100vh'],
+        // update: function(){
+        //     document.querySelector('.background').style.display = 'flex';  
+        // },
+        complete: function(){
+            document.querySelector('.title').remove();
+            document.querySelector('.line1').remove();
+            document.querySelector('.line2').remove();
+            
+        }
+    })
+    .add({
+        targets: '.background',
+        width: [0, '100vw'],
+        height: [0, '100vh'],
+        background: '#006828',
+        opacity: 1,
+        begin: function(){
+            document.querySelector('.background').style.display = 'flex';  
+        }
 
-// })
-// .add({
-//     targets: '.background',
-//     scale: [0, 1],
-//     duration: 1000,
-//     easing: 'easeInOutQuad',
-//     begin: function() {
-//       document.querySelector('.background').style.display = 'flex';
-//     },
-//     complete: function() {
-//       document.querySelector('.background::before').style.opacity = 1;
-//     }
+    })
+    // .add({
+    //     targets: '.background',
+    //     scale: [0, 1],
+    //     duration: 1000,
+    //     easing: 'easeInOutQuad',
+    //     begin: function() {
+    //       document.querySelector('.background').style.display = 'flex';
+    //     },
+    //     complete: function() {
+    //       document.querySelector('.background::before').style.opacity = 1;
+    //     }
 
-// })
+    // })
 }, 40000);
