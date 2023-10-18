@@ -464,10 +464,7 @@ setTimeout(() => {
     })
     .add({
         targets: '.title',
-        translateY: [0, '-100vh'],
-        // update: function(){
-        //     document.querySelector('.background').style.display = 'flex';  
-        // },
+        translateY: [0, '-50vh'],
         complete: function(){
             document.querySelector('.title').remove();
             document.querySelector('.line1').remove();
