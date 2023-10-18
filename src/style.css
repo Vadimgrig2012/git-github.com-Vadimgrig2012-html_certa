@@ -72,7 +72,7 @@ body {
   margin-right: 20px;
 }
 
-.bigtext {
+/* .bigtext {
   display: block;
   color: white;
   font-family: 'PT Sans Narrow';
@@ -83,7 +83,28 @@ body {
   bottom: 45%;
   border: solid 10px white;
   padding: 10px 100px 10px 100px;
+} */
+.bigtext {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
+.bigtext-text{
+  color: white;
+  font-family: 'PT Sans Narrow';
+  font-size: 90px;
+  font-weight: 900;
+  bottom: 45%;
+  position: absolute;
+  border: solid 10px white;
+  padding: 10px 100px 10px 100px;
+}
+
+
+
 
 
 .line1 {
