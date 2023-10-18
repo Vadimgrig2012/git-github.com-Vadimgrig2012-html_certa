@@ -479,7 +479,9 @@ setTimeout(() => {
         background: '#006828',
         opacity: 1,
         begin: function(){
-            document.querySelector('.background').style.display = 'flex';  
+            document.querySelector('.background').style.display = 'flex'; 
+            document.querySelector('.background').style.justifyContent = 'center';
+            document.querySelector('.background').style.alignItems = 'center';
         }
 
     })
@@ -496,4 +498,16 @@ setTimeout(() => {
     //     }
 
     // })
+    .add({
+        targets: '.background-text',
+        translateX: ['-20vw', 0],
+        opacity: [0, 1],
+        easing: 'easeOutElastic'
+    })
+    .add({
+       targets: '.button',
+       translateY: ['-20vw', 0],
+       opacity: [0, 1],
+       easing: 'easeOutElastic'
+    })
 }, 40000);

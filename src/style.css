@@ -207,3 +207,52 @@ body {
   transition: opacity 1s ease;
   z-index: -1;
 } */
+
+.background-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin-top: -50px;
+}
+
+.background-text{
+  /* margin-top: 50px; */
+  margin-bottom: 50px;
+  color: white;
+  font-family: 'PT Sans Narrow';
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.background-text p:first-child{
+  color: white;
+  font-family: 'PT Sans Narrow';
+  font-size: 30px;
+  text-align: center;
+}
+
+.button{
+  display: flex;
+  justify-content: center;
+}
+
+.background-button{
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid white;
+  text-decoration: none;
+  color: white;
+  font-family: 'PT Sans Narrow';
+  font-size: 30px;
+  text-align: center;
+  /* margin-top: 50px; */
+  width: 200px;
+  transition-duration: 0.5s;
+}
+
+.background-button:hover{
+  color: #006828;
+  background: white;
+  border-radius: 20px;
+  transition-duration: 0.5s;
+}
