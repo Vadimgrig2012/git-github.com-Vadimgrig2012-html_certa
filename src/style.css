@@ -126,6 +126,7 @@ body {
   background-color: #006828;
   align-items: center;
   justify-content: center;
+  height: 0;
 }
 
 .svg-box1 path{

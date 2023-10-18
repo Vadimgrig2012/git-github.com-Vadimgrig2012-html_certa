@@ -139,7 +139,7 @@ anime({
 
 anime({
     targets: '.box-subtitle',
-    height: '100%',
+    height: [0,'100%'],
     duration: 500,
     easing: 'linear',
     delay: 8000,
